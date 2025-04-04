@@ -1,0 +1,12 @@
+@import "tailwindcss";
+#root {
+  margin-top: 2em;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.964);
+  background-image: url(/images/background.png);
+}
