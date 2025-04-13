@@ -1,5 +1,3 @@
-import react from "react";
-
 export default function Pansi() {
   return (
     <div className="border-t-2 border-gray-500 bg-black">

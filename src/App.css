@@ -3,10 +3,16 @@
   margin-top: 2em;
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0.964);
-  background-image: url(/images/background.png);
+  background-color: rgba(242, 242, 242, 0.964);
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.521);
+  display: flex;
+  flex-direction: column;
 }
