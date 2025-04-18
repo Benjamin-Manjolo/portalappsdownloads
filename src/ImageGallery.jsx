@@ -54,7 +54,7 @@ export default function ImageGallery() {
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-2 md:w-[720px] md:grid-cols-3">
+    <div className="grid grid-cols-2 gap-2 sm:w-[520px] md:grid-cols-3">
       {images.map((im, index) => (
         <img key={index} src={im.src} alt={`Image ${index}`} />
       ))}
