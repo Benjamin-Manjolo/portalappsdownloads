@@ -1,22 +1,66 @@
 import React from "react";
-import ImageGallerry from "./ImageGallery";
-import Pansi from "./Pansi";
+import Navbar from "./Navbar";
+import ImageGallery from "./ImageGallery";
+
 export default function App() {
   return (
-    <React.Fragment className="flex justify-center">
-      <div className="bg-gray-50 rounded-1xl flex flex-col h-auto w-auto p-4">
-        <h1 className="font-normal">BENJAMIN MANJOLO</h1>
-        <p className="font-light md:text-red-700">
-          I am Benjamin Manjolo and i have skills in graphic designing, Web
-          development and software engeenering.
-          <br />
-          <span className="font-extralight font-thin text-green-600 text-[12px]">
-            <i>"with certifications from University of Malawi".</i>
-          </span>
+    <div className="flex flex-col min-h-screen font-sans">
+      {/* Navigation */}
+      <nav className="flex justify-between items-center p-4 bg-white">
+        <div className="text-gray-600">Docs</div>
+        <div className="flex space-x-4">
+          <div className="text-gray-600">Services</div>
+          <div className="text-gray-600">Products</div>
+          <div className="text-gray-600">Pricing</div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="flex flex-col items-center text-center p-2">
+        <h1 className="text-green-500 text-2xl font-medium">nzaEazy</h1>
+        <h2 className="text-green-500 text-1xl font-bold ">
+          BETTER IN TECHNOLOGY
+        </h2>
+        <p className="text-gray-700 text-sm">
+          inspiring innovative mindset among youths
         </p>
-      </div>
-      <ImageGallerry />
-      <Pansi />
-    </React.Fragment>
+      </section>
+
+      {/* Our Team Section */}
+      <section className="px-4 py-6 w-3/4">
+        <h2 className="text-green-500 text-3xl font-bold mb-2">Our team</h2>
+        <p className="text-gray-700">
+          Benjamin Manjolo founder, is a graphic designer, software engineer and
+          also a photographer who is currently staying in Blantyre.
+        </p>
+      </section>
+
+      {/* Our Goal Section */}
+      <section className="px-3 pl-22 py-6 flex flex-col items-end text-right ">
+        <h2 className="text-green-500 text-3xl font-bold mb-2">Our goal</h2>
+        <p className="text-gray-700 max-w-xs">
+          nzaEazy aims at promoting youths in Malawi to embrace technology and
+          how they can make a good life out of it
+        </p>
+      </section>
+
+      {/* Join Us Section */}
+      <section className="px-4 py-6">
+        <h2 className="text-green-500 text-3xl font-bold mb-4">Hire us</h2>
+        <button className="bg-green-500 text-white px-4 py-2 uppercase font-medium">
+          Message
+        </button>
+      </section>
+
+      {/* Explore Section */}
+      <section className="py-8">
+        <ImageGallery />
+      </section>
+
+      {/* Footer */}
+      <footer className="mt-auto bg-green-800 text-white p-4">
+        <p className="text-center">&copy; 2025 nzaEazy</p>
+      </footer>
+    </div>
   );
 }
