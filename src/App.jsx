@@ -44,7 +44,7 @@ export default function App() {
         )}
         <div className="bg-blue-500 h-auto w-auto rounded-2xl p-3 m-4 ">
           <a
-            href="/src/assets/Unima_1.0.0.apk"
+            href="/Unima_1.0.0.apk"
             onClick={handleDownloadClick}
             className="text-white underline mb-2"
           >
@@ -54,7 +54,7 @@ export default function App() {
         <div className="bg-blue-500 h-auto w-auto rounded-2xl p-3 m-4 ">
           {" "}
           <a
-            href="/src/assets/Luanar_1.0.0.apk"
+            href="/Luanar_1.0.0.apk"
             onClick={handleDownloadClick}
             className="text-white underline mb-2"
           >
@@ -63,7 +63,7 @@ export default function App() {
         </div>
         <div className="bg-blue-500 h-auto w-auto rounded-2xl p-3 m-4 ">
           <a
-            href="/src/assets/Cunima_1.0.0.apk"
+            href="/Cunima_1.0.0.apk"
             onClick={handleDownloadClick}
             className="text-white underline mb-2"
           >
@@ -73,7 +73,7 @@ export default function App() {
         <div className="bg-blue-500 h-auto w-auto rounded-2xl p-3 m-4 ">
           {" "}
           <a
-            href="/src/assets/Kuhes_1.0.0.apk"
+            href="/Kuhes_1.0.0.apk"
             onClick={handleDownloadClick}
             className="text-white underline mb-2"
           >
