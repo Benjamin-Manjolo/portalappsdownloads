@@ -13,7 +13,7 @@ export default function App() {
         if (portfolioSection) {
           portfolioSection.scrollIntoView({ behavior: "smooth" });
         }
-      }, 2000);
+      }, 5000);
     }
     return () => clearTimeout(timer);
   }, [showPrompt]);
@@ -35,48 +35,59 @@ export default function App() {
   return (
     <>
       <div className="flex flex-col mt-20 justify-center p-5 items-center">
-        <div className="bg-blue-700 h-auto w-auto rounded-4xl p-5 ">
-          <p className="text-bold text-1xl text-white">DOWNLOAD</p>
-        </div>
+        <p className="text-bold text-3xl">DOWNLOAD</p>
+
         {showPrompt && (
           <div className="mb-4 p-2 bg-green-200 text-green-800 rounded">
             Downloading has started
           </div>
         )}
-        <a
-          href="/src/assets/Unima_1.0.0.apk"
-          onClick={handleDownloadClick}
-          className="text-blue-500 underline mb-2"
-        >
-          Unima
-        </a>
-        <a
-          href="/src/assets/Luanar_1.0.0.apk"
-          onClick={handleDownloadClick}
-          className="text-blue-500 underline mb-2"
-        >
-          Luanar
-        </a>
-        <a
-          href="/src/assets/Cunima_1.0.0.apk"
-          onClick={handleDownloadClick}
-          className="text-blue-500 underline mb-2"
-        >
-          Cunima
-        </a>
-        <a
-          href="/src/assets/Kuhes_1.0.0.apk"
-          onClick={handleDownloadClick}
-          className="text-blue-500 underline mb-2"
-        >
-          Kuhes
-        </a>
+        <div className="bg-blue-700 h-auto w-auto rounded-4xl p-5 ">
+          <a
+            href="/src/assets/Unima_1.0.0.apk"
+            onClick={handleDownloadClick}
+            className="text-blue-500 underline mb-2"
+          >
+            Unima
+          </a>
+        </div>
+        <div className="bg-blue-700 h-auto w-auto rounded-4xl p-5 ">
+          {" "}
+          <a
+            href="/src/assets/Luanar_1.0.0.apk"
+            onClick={handleDownloadClick}
+            className="text-blue-500 underline mb-2"
+          >
+            Luanar
+          </a>
+        </div>
+        <div className="bg-blue-700 h-auto w-auto rounded-4xl p-5 ">
+          <a
+            href="/src/assets/Cunima_1.0.0.apk"
+            onClick={handleDownloadClick}
+            className="text-blue-500 underline mb-2"
+          >
+            Cunima
+          </a>
+        </div>
+        <div className="bg-blue-700 h-auto w-auto rounded-4xl p-5 ">
+          {" "}
+          <a
+            href="/src/assets/Kuhes_1.0.0.apk"
+            onClick={handleDownloadClick}
+            className="text-blue-500 underline mb-2"
+          >
+            Kuhes
+          </a>
+        </div>
       </div>
 
       {/* Portfolio section at the bottom */}
       <div id="portfolio" className="mt-40 p-5 bg-gray-100 w-full text-center">
-        <h2 className="text-2xl font-bold mb-4">Portfolio</h2>
-        <p>This is the portfolio section.</p>
+        <h2 className="text-2xl font-bold mb-4">
+          follow our facebook page ,search for Nzaeazy llc
+        </h2>
+        <p>"@2025 Nzaeazy llc."</p>
       </div>
     </>
   );
