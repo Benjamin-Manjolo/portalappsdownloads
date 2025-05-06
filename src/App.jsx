@@ -35,47 +35,47 @@ export default function App() {
   return (
     <>
       <div className="flex flex-col mt-20 justify-center p-5 items-center">
-        <p className="text-bold text-3xl">DOWNLOAD</p>
+        <p className="text-bold text-4xl">DOWNLOAD</p>
 
         {showPrompt && (
           <div className="mb-4 p-2 bg-green-200 text-green-800 rounded">
             Downloading has started
           </div>
         )}
-        <div className="bg-blue-700 h-auto w-auto rounded-4xl p-5 ">
+        <div className="bg-blue-500 h-auto w-auto rounded-2xl p-3 m-4 ">
           <a
             href="/src/assets/Unima_1.0.0.apk"
             onClick={handleDownloadClick}
-            className="text-blue-500 underline mb-2"
+            className="text-white underline mb-2"
           >
             Unima
           </a>
         </div>
-        <div className="bg-blue-700 h-auto w-auto rounded-4xl p-5 ">
+        <div className="bg-blue-500 h-auto w-auto rounded-2xl p-3 m-4 ">
           {" "}
           <a
             href="/src/assets/Luanar_1.0.0.apk"
             onClick={handleDownloadClick}
-            className="text-blue-500 underline mb-2"
+            className="text-white underline mb-2"
           >
             Luanar
           </a>
         </div>
-        <div className="bg-blue-700 h-auto w-auto rounded-4xl p-5 ">
+        <div className="bg-blue-500 h-auto w-auto rounded-2xl p-3 m-4 ">
           <a
             href="/src/assets/Cunima_1.0.0.apk"
             onClick={handleDownloadClick}
-            className="text-blue-500 underline mb-2"
+            className="text-white underline mb-2"
           >
             Cunima
           </a>
         </div>
-        <div className="bg-blue-700 h-auto w-auto rounded-4xl p-5 ">
+        <div className="bg-blue-500 h-auto w-auto rounded-2xl p-3 m-4 ">
           {" "}
           <a
             href="/src/assets/Kuhes_1.0.0.apk"
             onClick={handleDownloadClick}
-            className="text-blue-500 underline mb-2"
+            className="text-white underline mb-2"
           >
             Kuhes
           </a>
