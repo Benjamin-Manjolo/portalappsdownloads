@@ -42,26 +42,26 @@ export default function App() {
             Downloading has started
           </div>
         )}
-        <div className="bg-blue-500 h-auto w-auto rounded-2xl p-3 m-4 ">
+        <button className="bg-blue-500 h-auto w-auto rounded-2xl p-3 m-4 ">
           <a
             href="/Unima_1.0.0.apk"
             onClick={handleDownloadClick}
-            className="text-white underline mb-2"
+            className="text-black underline mb-2"
           >
             Unima
           </a>
-        </div>
-        <div className="bg-blue-500 h-auto w-auto rounded-2xl p-3 m-4 ">
+        </button>
+        <button className="bg-blue-500 h-auto w-auto rounded-2xl p-3 m-4 ">
           {" "}
           <a
             href="/Luanar_1.0.0.apk"
             onClick={handleDownloadClick}
-            className="text-white underline mb-2"
+            className="text-red-500 underline mb-2"
           >
             Luanar
           </a>
-        </div>
-        <div className="bg-blue-500 h-auto w-auto rounded-2xl p-3 m-4 ">
+        </button>
+        <button className="bg-blue-500 h-auto w-auto rounded-2xl p-3 m-4 ">
           <a
             href="/Cunima_1.0.0.apk"
             onClick={handleDownloadClick}
@@ -69,8 +69,8 @@ export default function App() {
           >
             Cunima
           </a>
-        </div>
-        <div className="bg-blue-500 h-auto w-auto rounded-2xl p-3 m-4 ">
+        </button>
+        <button className="bg-blue-500 h-auto w-auto rounded-2xl p-3 m-4 ">
           {" "}
           <a
             href="/Kuhes_1.0.0.apk"
@@ -79,15 +79,19 @@ export default function App() {
           >
             Kuhes
           </a>
-        </div>
+        </button>
+        <button>PAY</button>
       </div>
 
       {/* Portfolio section at the bottom */}
-      <div id="portfolio" className="mt-40 p-5 bg-gray-100 w-full text-center">
+      <div
+        id="portfolio"
+        className="mt-40 p-5 bg-gray-500 w-screen text-center"
+      >
         <h2 className="text-2xl font-bold mb-4">
-          follow our facebook page ,search for Nzaeazy llc
+          follow our facebook page Nzaeazy llc
         </h2>
-        <p>"@2025 Nzaeazy llc."</p>
+        <p>@2025 Nzaeazy llc.</p>
       </div>
     </>
   );
