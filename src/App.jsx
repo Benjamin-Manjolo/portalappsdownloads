@@ -88,10 +88,10 @@ export default function App() {
         id="portfolio"
         className="mt-40 p-5 bg-gray-500 w-screen text-center"
       >
-        <h2 className="text-2xl font-light mb-4">
+        <h2 className=" font-light mb-4">
           follow our facebook page Nzaeazy llc
+          <p>@2025 Nzaeazy llc.</p>
         </h2>
-        <p>@2025 Nzaeazy llc.</p>
       </div>
     </>
   );
