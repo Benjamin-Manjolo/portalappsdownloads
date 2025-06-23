@@ -10,7 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@tailwindcss/vite": "^4.0.17",
+    "axios": "^1.10.0",
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
     "lucide-react": "^0.487.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

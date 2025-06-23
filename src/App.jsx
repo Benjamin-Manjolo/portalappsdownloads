@@ -1,98 +1,166 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHome,
+  faFileAlt,
+  faTableCells,
+  faBell,
+  faCalendar,
+  faUser,
+  faClone,
+  faMoneyBill,
+} from "@fortawesome/free-solid-svg-icons";
 
-export default function App() {
-  const [showPrompt, setShowPrompt] = useState(false);
-
-  useEffect(() => {
-    let timer;
-    if (showPrompt) {
-      timer = setTimeout(() => {
-        setShowPrompt(false);
-        // Redirect to portfolio section
-        const portfolioSection = document.getElementById("portfolio");
-        if (portfolioSection) {
-          portfolioSection.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 5000);
-    }
-    return () => clearTimeout(timer);
-  }, [showPrompt]);
-
-  const handleDownloadClick = (e) => {
-    e.preventDefault();
-    setShowPrompt(true);
-    // Allow download to start by creating a temporary link and clicking it
-    const link = e.currentTarget;
-    const href = link.getAttribute("href");
-    const tempLink = document.createElement("a");
-    tempLink.href = href;
-    tempLink.download = "";
-    document.body.appendChild(tempLink);
-    tempLink.click();
-    document.body.removeChild(tempLink);
-  };
+export default function StudentPortalAccommodation() {
+  const allocationData = [
+    { year: "2025", hostelName: "--", roomNumber: "--", date: "31st May 2024" },
+    {
+      year: "2024",
+      hostelName: "Hosteen",
+      roomNumber: "7",
+      date: "31st May 2024",
+    },
+    { year: "2024", hostelName: "--", roomNumber: "--", date: "--" },
+    { year: "2023", hostelName: "--", roomNumber: "--", date: "--" },
+    {
+      year: "2023",
+      hostelName: "Hosteen",
+      roomNumber: "7",
+      date: "20th April 2022",
+    },
+  ];
 
   return (
-    <>
-      <div className="flex flex-col mt-20 justify-center p-5 items-center">
-        <p className="text-bold text-4xl">DOWNLOAD</p>
-
-        {showPrompt && (
-          <div className="mb-4 p-2 bg-green-200 text-green-800 rounded">
-            Downloading has started
+    <div className="max-w-md mx-auto bg-gray-200 min-h-screen">
+      {/* Header */}
+      <div className="bg-[#022aa4] mb-0.5 text-white p-4">
+        <div className="flex justify-evenly space-x-2.5">
+          <div className="flex justify-center space-x-3">
+            <div className="w-8 h-8  rounded flex items-center justify-center">
+              <div className="w-10 h-10 bg-[#022aa4] rounded-sm flex items-center justify-center">
+                <img className=" w-[50px] h-[40px]" src="./images/image.png" />
+              </div>
+            </div>
+            <span className="text-2xl font-light flex flex-row items-center justify-center">
+              Student Portal
+            </span>
           </div>
-        )}
-        <button className="bg-blue-500 h-auto w-auto rounded-2xl p-3 m-4 ">
-          <a
-            href="/Unima_1.0.0.apk"
-            onClick={handleDownloadClick}
-            className="text-black underline mb-2"
-          >
-            Unima
-          </a>
-        </button>
-        <button className="bg-blue-500 h-auto w-auto rounded-2xl p-3 m-4 ">
-          {" "}
-          <a
-            href="/Luanar_1.0.0.apk"
-            onClick={handleDownloadClick}
-            className="text-red-500 underline mb-2"
-          >
-            Luanar
-          </a>
-        </button>
-        <button className="bg-blue-500 h-auto w-auto rounded-2xl p-3 m-4 ">
-          <a
-            href="/Cunima_1.0.0.apk"
-            onClick={handleDownloadClick}
-            className="text-white underline mb-2"
-          >
-            Cunima
-          </a>
-        </button>
-        <button className="bg-blue-500 h-auto w-auto rounded-2xl p-3 m-4 ">
-          {" "}
-          <a
-            href="/Kuhes_1.0.0.apk"
-            onClick={handleDownloadClick}
-            className="text-white underline mb-2"
-          >
-            Kuhes
-          </a>
-        </button>
-        <button>PAY</button>
+        </div>
       </div>
 
-      {/* Portfolio section at the bottom */}
-      <div
-        id="portfolio"
-        className="mt-40 p-5 bg-gray-500 w-screen text-center"
-      >
-        <h2 className=" font-light mb-4">
-          follow our facebook page Nzaeazy llc
-          <p>@2025 Nzaeazy llc.</p>
-        </h2>
+      {/* Hamburger menu icon */}
+      <div className="bg-[#022aa4] p-4 px-4 pb-2">
+        <div className="flex justify-between">
+          <div className="flex flex-col space-y-1">
+            <div className="w-4 h-0.5 bg-white"></div>
+            <div className="w-4 h-0.5 bg-white"></div>
+            <div className="w-4 h-0.5 bg-white"></div>
+          </div>
+          <div className="flex items-center space-x-3">
+            <FontAwesomeIcon icon={faBell} className="w-5 h-5 text-white" />
+            <FontAwesomeIcon
+              icon={faTableCells}
+              className="w-5 h-5 text-white"
+            />
+            <FontAwesomeIcon
+              icon={faUser}
+              className="w-5 h-5 text-[#f4f4f4] bg-gray-200  rounded-2xl p-1"
+            />
+          </div>
+        </div>
       </div>
-    </>
+
+      {/* My Accommodation Banner */}
+      <div className="bg-[#c4ac5f] m-3 rounded-[4px] text-white px-4 py-3">
+        <div className="flex items-center space-x-2">
+          <FontAwesomeIcon icon={faHome} className="w-5 h-5" />
+          <span className="font-medium">MY ACCOMMODATION</span>
+        </div>
+      </div>
+
+      {/* Description */}
+      <div className="p-6 bg-gray-50">
+        <p className="text-sm text-gray-700 leading-relaxed">
+          The Room Booking and Allocation System lets you sort out all your
+          campus accommodation issues. The navigation menu below provides all
+          the navigation you need for the system.
+        </p>
+      </div>
+
+      {/* Navigation Menu */}
+      <div className="bg-white">
+        {/* Apply for Rooms */}
+        <div className="flex items-center p-4 border-b border-gray-200">
+          <div className="w-13 h-13 bg-[#83bff3] rounded-lg flex items-center justify-center mr-4">
+            <FontAwesomeIcon icon={faHome} className="w-6 h-6 text-blue-800" />
+          </div>
+          <span className="text-[#022aa4] font-medium">Apply for Rooms</span>
+        </div>
+
+        {/* Swap Rooms */}
+        <div className="flex items-center p-4 border-b border-gray-200">
+          <div className="w-13 h-13 bg-[#83bff3] rounded-lg flex items-center justify-center mr-4">
+            <FontAwesomeIcon icon={faClone} className="w-6 h-6 text-blue-800" />
+          </div>
+          <span className="text-[#022aa4] font-medium">Swap Rooms</span>
+        </div>
+
+        {/* Accommodation Rules */}
+        <div className="flex items-center p-4 border-b border-gray-200">
+          <div className="w-13 h-13 bg-[#83bff3] rounded-lg flex items-center justify-center mr-4">
+            <FontAwesomeIcon
+              icon={faFileAlt}
+              className="w-3 h-3 text-blue-800"
+            />
+          </div>
+          <span className="text-[#022aa4] font-medium">Accomm. Rules</span>
+        </div>
+
+        {/* My Bills */}
+        <div className="flex items-center p-4 border-b border-gray-200">
+          <div className="w-13 h-13 bg-[#83bff3] rounded-lg flex items-center justify-center mr-4">
+            <FontAwesomeIcon
+              icon={faMoneyBill}
+              className="w-6 h-6 text-blue-800"
+            />
+          </div>
+          <span className="text-[#022aa4] font-medium">My Bills</span>
+        </div>
+      </div>
+
+      {/* Allocation History */}
+      <div className="mt-10 mx-4">
+        <h3 className="text-lg font-medium text-gray-800 mb-4">
+          Allocation History
+        </h3>
+
+        <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+          {/* Table Header */}
+          <div className="bg-gray-50 px-4 py-3 border-b">
+            <div className="grid grid-cols-4 gap-2 text-sm font-medium text-gray-700">
+              <span>Allocation Year</span>
+              <span>Hostel Name</span>
+              <span>Room Number</span>
+              <span>Date</span>
+            </div>
+          </div>
+
+          {/* Table Rows */}
+          {allocationData.map((item, index) => (
+            <div
+              key={index}
+              className="px-4 py-3 border-b border-gray-130 last:border-b-0"
+            >
+              <div className="grid grid-cols-4 gap-2 text-sm text-gray-800">
+                <span>{item.year}</span>
+                <span>{item.hostelName}</span>
+                <span>{item.roomNumber}</span>
+                <span>{item.date}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
