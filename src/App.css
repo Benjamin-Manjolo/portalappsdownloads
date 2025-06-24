@@ -1,5 +1,4 @@
-@import "tailwindcss/preflight";
-@tailwind utilities;
+@import "tailwindcss";
 
 body {
   background-color: rgba(111, 101, 101, 0.868);
