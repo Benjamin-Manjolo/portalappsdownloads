@@ -6,7 +6,9 @@ import {
   faTableCells,
   faBell,
   faUser,
+  faSignOut,
   faClone,
+  faKey,
   faMoneyBill,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -15,10 +17,15 @@ export default function StudentPortalAccommodation() {
   const [lastLogin, setLastLogin] = useState("");
 
   const allocationData = [
-    { year: "2025", hostelName: "--", roomNumber: "--", date: "31st May 2024" },
+    {
+      year: "2025",
+      hostelName: "Kenyatta",
+      roomNumber: "9",
+      date: "31st May 2025",
+    },
     {
       year: "2024",
-      hostelName: "Hosteen",
+      hostelName: "Kanjedza",
       roomNumber: "7",
       date: "31st May 2024",
     },
@@ -26,7 +33,7 @@ export default function StudentPortalAccommodation() {
     { year: "2023", hostelName: "--", roomNumber: "--", date: "--" },
     {
       year: "2023",
-      hostelName: "Hosteen",
+      hostelName: "Mbelwa",
       roomNumber: "7",
       date: "20th April 2022",
     },
@@ -59,7 +66,7 @@ export default function StudentPortalAccommodation() {
   }, []);
 
   return (
-    <div className="max-w-full sm:max-w-md mx-auto bg-gray-200 min-h-screen px-2 sm:px-0">
+    <div className="max-w-screen mx-auto bg-gray-200 min-h-screen px-2 sm:px-0">
       {/* Header */}
       <div className="bg-[#022aa4] mb-0.5 text-white p-4">
         <div className="flex justify-evenly space-x-2.5">
@@ -106,27 +113,30 @@ export default function StudentPortalAccommodation() {
       {/* User Modal */}
       {showUserModal && (
         <div className="fixed top-20 right-4 sm:right-4 bg-[#022aa4] text-white rounded shadow-lg w-64 z-50 max-w-full sm:max-w-xs">
-          <div className="p-4 border-b border-gray-300">
-            <div className="font-semibold text-center text-sm sm:text-base">
-              BED/COM/02/21 - Benjamin Manjolo
+          <div className="p-6 border-b border-gray-300">
+            <div className="font-normal text-center text-[12px] ">
+              BED/COM/02/21 - Simeon Gama
             </div>
-            <div className="text-xs text-center mt-1">
+            <div className="text-[9px] text-center mt-1">
               Last Login: {lastLogin}
             </div>
           </div>
-          <div className="flex justify-between p-3 bg-[#c4ac5f] rounded-b">
-            <button className="bg-transparent text-white font-semibold py-1 px-2 rounded border border-white hover:bg-white hover:text-[#c4ac5f] transition text-xs sm:text-sm">
-              Change password
-            </button>
-            <button className="bg-transparent text-white font-semibold py-1 px-2 rounded border border-white hover:bg-white hover:text-[#c4ac5f] transition text-xs sm:text-sm">
-              Log out
-            </button>
+          <div className="bg-[#96823f] h-12 flex justify-start items-center ">
+            <div>
+              <span className="border-2 text-[12px] text-gray-700 border-gray-400 p-2 m-2">
+                <FontAwesomeIcon icon={faKey} />
+                Change password
+              </span>
+              <span className="border-2 text-[12px] text-gray-700 border-gray-400 p-2 m-2">
+                <FontAwesomeIcon icon={faSignOut} /> Log out
+              </span>
+            </div>
           </div>
         </div>
       )}
 
       {/* My Accommodation Banner */}
-      <div className="bg-[#c4ac5f] m-3 rounded-[4px] text-white px-4 py-3">
+      <div className="bg-[#96823f] m-3 rounded-[4px] text-white px-4 py-3">
         <div className="flex items-center space-x-2">
           <FontAwesomeIcon icon={faHome} className="w-5 h-5" />
           <span className="font-medium text-sm sm:text-base">
@@ -216,8 +226,8 @@ export default function StudentPortalAccommodation() {
             >
               <div className="grid grid-cols-4 gap-1 sm:gap-2 text-xs sm:text-sm text-gray-800">
                 <span>{item.year}</span>
-                <span>{item.hostelName}</span>
-                <span>{item.roomNumber}</span>
+                <span className="">{item.hostelName}</span>
+                <span className="ml-8">{item.roomNumber}</span>
                 <span>{item.date}</span>
               </div>
             </div>
