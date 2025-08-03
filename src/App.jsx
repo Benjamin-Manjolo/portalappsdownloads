@@ -22,16 +22,16 @@ export default function StudentPortalAccommodation() {
 
   const allocationData = [
     {
-      year: "2025",
-      hostelName: "Kenyatta",
-      roomNumber: "9",
-      date: "31st May 2025",
+      year: "2026",
+      hostelName: "umodzi",
+      roomNumber: "112",
+      date: "16th May, 2025",
     },
     {
-      year: "2024",
-      hostelName: "Kanjedza",
-      roomNumber: "7",
-      date: "31st May 2024",
+      year: "2025",
+      hostelName: "--",
+      roomNumber: "--",
+      date: "--",
     },
     { year: "2024", hostelName: "--", roomNumber: "--", date: "--" },
     { year: "2023", hostelName: "--", roomNumber: "--", date: "--" },
@@ -126,22 +126,22 @@ export default function StudentPortalAccommodation() {
 
               {/* User Modal */}
               {showUserModal && (
-                <div className="fixed top-20 right-4 sm:right-4 bg-[#022aa4] text-white rounded shadow-lg w-64 z-50 max-w-full sm:max-w-xs">
-                  <div className="p-6 border-b border-gray-300">
-                    <div className="font-normal text-center text-[12px] ">
-                      BED/COM/02/21 - Simeon Gama
+                <div className="fixed top-29 right-6 sm:right-4 bg-[#022aa4] text-white   shadow-lg w-64 z-50 max-w-full sm:max-w-xs">
+                  <div className="p-2 pb-8 border-b border-gray-300">
+                    <div className="whitespace-nowrap text-center text-[14px] ">
+                      BAH/116/24 - Martha Mkandawire
                     </div>
-                    <div className="text-[9px] text-center mt-1">
+                    <div className="text-[10px] text-center mt-1">
                       Last Login: {lastLogin}
                     </div>
                   </div>
-                  <div className="bg-[#96823f] h-12 flex justify-start items-center ">
+                  <div className="bg-[#c4ac5f] h-12 flex justify-start items-center ">
                     <div>
-                      <span className="border-2 text-[12px] text-gray-700 border-gray-400 p-2 m-2">
+                      <span className="border-2 text-[12px] text-gray-700 border-gray-200  p-2 m-2">
                         <FontAwesomeIcon icon={faKey} />
                         Change password
                       </span>
-                      <span className="border-2 text-[12px] text-gray-700 border-gray-400 p-2 m-2">
+                      <span className="border-2 text-[12px] text-gray-700 border-gray-200  p-2 m-2">
                         <FontAwesomeIcon icon={faSignOut} /> Log out
                       </span>
                     </div>
@@ -150,7 +150,7 @@ export default function StudentPortalAccommodation() {
               )}
 
               {/* My Accommodation Banner */}
-              <div className="bg-[#96823f] m-3 rounded-[4px] text-white px-4 py-3">
+              <div className="bg-[#c4ac5f] m-3 rounded-[4px] text-white px-4 py-3">
                 <div className="flex items-center space-x-2">
                   <FontAwesomeIcon icon={faHome} className="w-5 h-5" />
                   <span className="font-medium text-sm sm:text-base">
@@ -161,7 +161,7 @@ export default function StudentPortalAccommodation() {
 
               {/* Description */}
               <div className="p-4 sm:p-6 bg-gray-50">
-                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#727E7C] leading-relaxed">
                   The Room Booking and Allocation System lets you sort out all
                   your campus accommodation issues. The navigation menu below
                   provides all the navigation you need for the system.
@@ -170,11 +170,11 @@ export default function StudentPortalAccommodation() {
 
               {/* Navigation Menu */}
               <div className="bg-white">
-                <div className="flex items-center p-3 sm:p-4 border-b border-gray-200">
-                  <div className="w-10 h-10 sm:w-13 sm:h-13 bg-[#83bff3] rounded-lg flex items-center justify-center mr-3 sm:mr-4">
+                <div className="flex items-center p-3 pb-0 sm:p-4 border-b border-gray-200">
+                  <div className="w-10 h-10 sm:w-13 sm:h-13 bg-[#D7ECF7]  flex items-center justify-center mr-3 sm:mr-4">
                     <FontAwesomeIcon
                       icon={faHome}
-                      className="w-5 sm:w-6 h-5 sm:h-6 text-blue-800"
+                      className="w-full sm:w-full h-full sm:h-full text-blue-800"
                     />
                   </div>
                   <span className="text-[#022aa4] font-medium text-sm sm:text-base">
@@ -182,8 +182,8 @@ export default function StudentPortalAccommodation() {
                   </span>
                 </div>
 
-                <div className="flex items-center p-3 sm:p-4 border-b border-gray-200">
-                  <div className="w-10 h-10 sm:w-13 sm:h-13 bg-[#83bff3] rounded-lg flex items-center justify-center mr-3 sm:mr-4">
+                <div className="flex items-center p-3 pb-0 sm:p-4 border-b border-gray-200">
+                  <div className="w-10 h-10 sm:w-13 sm:h-13 bg-[#D7ECF7]  flex items-center justify-center mr-3 sm:mr-4">
                     <FontAwesomeIcon
                       icon={faClone}
                       className="w-5 sm:w-6 h-5 sm:h-6 text-blue-800"
@@ -194,8 +194,8 @@ export default function StudentPortalAccommodation() {
                   </span>
                 </div>
 
-                <div className="flex items-center p-3 sm:p-4 border-b border-gray-200">
-                  <div className="w-10 h-10 sm:w-13 sm:h-13 bg-[#83bff3] rounded-lg flex items-center justify-center mr-3 sm:mr-4">
+                <div className="flex items-center p-3 pb-0 sm:p-4 border-b border-gray-200">
+                  <div className="w-10 h-10 sm:w-13 sm:h-13 bg-[#D7ECF7]  flex items-center justify-center mr-3 sm:mr-4">
                     <FontAwesomeIcon
                       icon={faFileAlt}
                       className="w-4 sm:w-5 h-4 sm:h-5 text-blue-800"
@@ -206,8 +206,8 @@ export default function StudentPortalAccommodation() {
                   </span>
                 </div>
 
-                <div className="flex items-center p-3 sm:p-4 border-b border-gray-200">
-                  <div className="w-10 h-10 sm:w-13 sm:h-13 bg-[#83bff3] rounded-lg flex items-center justify-center mr-3 sm:mr-4">
+                <div className="flex items-center p-3 pb-1 sm:p-4 border-b border-gray-200">
+                  <div className="w-10 h-10 sm:w-13 sm:h-13 bg-[#D7ECF7]  flex items-center justify-center mr-3 sm:mr-4">
                     <FontAwesomeIcon
                       icon={faMoneyBill}
                       className="w-5 sm:w-6 h-5 sm:h-6 text-blue-800"
@@ -221,16 +221,23 @@ export default function StudentPortalAccommodation() {
 
               {/* Allocation History */}
               <div className="mt-8 mx-2 sm:mx-4">
-                <h3 className="text-base sm:text-lg font-medium text-gray-800 mb-3 sm:mb-4">
-                  Allocation History
-                </h3>
-                <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+                <div className="bg-white  shadow-sm overflow-hidden">
+                  <div className="bg-[#04227F] w-screen h-[2px]"></div>
                   <div className="bg-gray-50 px-3 sm:px-4 py-2 sm:py-3 border-b">
+                    <h3 className="text-base sm:text-lg font-medium text-gray-800 mb-3 sm:mb-4">
+                      Allocation History
+                    </h3>
                     <div className="grid grid-cols-4 gap-1 sm:gap-2 text-xs sm:text-sm font-medium text-gray-700">
-                      <span>Allocation Year</span>
-                      <span>Hostel Name</span>
-                      <span>Room Number</span>
-                      <span>Date</span>
+                      <span className=" font-bold text-center">
+                        Allocation Year
+                      </span>
+                      <span className=" font-bold text-center">
+                        Hostel Name
+                      </span>
+                      <span className=" font-bold text-center">
+                        Room Number
+                      </span>
+                      <span className=" font-bold text-center">Date</span>
                     </div>
                   </div>
                   {allocationData.map((item, index) => (
@@ -239,10 +246,10 @@ export default function StudentPortalAccommodation() {
                       className="px-3 sm:px-4 py-2 sm:py-3 border-b border-gray-300 last:border-b-0"
                     >
                       <div className="grid grid-cols-4 gap-1 sm:gap-2 text-xs sm:text-sm text-gray-800">
-                        <span>{item.year}</span>
-                        <span className="">{item.hostelName}</span>
-                        <span className="ml-8">{item.roomNumber}</span>
-                        <span>{item.date}</span>
+                        <span className="text-center">{item.year}</span>
+                        <span className="text-center">{item.hostelName}</span>
+                        <span className="text-center">{item.roomNumber}</span>
+                        <span className="text-center">{item.date}</span>
                       </div>
                     </div>
                   ))}
